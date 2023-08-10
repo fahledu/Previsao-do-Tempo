@@ -1,5 +1,5 @@
 //Criar uma conta no https://openweathermap.org/ criar uma API KEY e substituir abaixo
-const key = `${{ secrets.APIKEY }}`;
+const key = process.env.APIKEY;
 
 document.addEventListener('DOMContentLoaded', () => {
     const updateWeatherData = (data) => {
