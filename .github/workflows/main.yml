@@ -16,4 +16,4 @@ jobs:
       - name: Use the API key
         env:
           API_KEY: ${{ secrets.API_KEY }}
-        run: node ../script.js
+        run: node ./script.js
