@@ -1,0 +1,19 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Use the API key
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: node Previsao-do-Tempo/script.js
